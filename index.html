@@ -3,15 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Server Tutorial</title>
 </head>
 <body>
-    <nav>
-
+    <nav class="site-nav grid">
+        <h1>Scott's Guide to Ubuntu</h1>
+        <ul>
+            <li>
+                <a href="#vmsetup-box">Vm Server</a>
+            </li>
+            <li>
+                <a href="#ssh-git-box">Ssh and Git</a>
+            </li>
+            <li>
+                <a href="#">Apache2</a>
+            </li>
+        </ul>
     </nav>
-    <video controls src="./Files/Screencast from 19. sep. 2023 kl. 11.19 +0200.webm"></video>
+
+    
+    <section id="welcome" class="grid">
+        <div class="welcome-text">
+            <h2>Wm-Server,<br/> Ssh, Git <br/>and Apache2</h2>
+            <p class="leading"></p>
+        </div>
+        <div class="welcome-img">
+            <img src="./Files/stardistroyer.webp" alt="Pic of a Star Distroyer">
+        </div>
+    </section>
+
+    <section id="vmsetup-box">
+        <div class="vmsetup">
+            <h3>How to setupp VM Server</h3>
+        </div>
+        <div>
+            <video controls src="./Files/Screencast from 19. sep. 2023 kl. 11.19 +0200.webm" alt="(Video) VM Settup tutorial "></video>
+        </div>
+        <div>
+            <p>
+                By following the video, you will learn how to create and set up your own VM server.
+                <br>
+                To begin, you will have to go to the IKT-Fag website. Open your preferred search engine and look for the IP 10.12.99.69, which will take you to the IKT-Fag website. Once there, in the upper right corner, you'll find a menu. Click on your class's name, and then click on your own username. There will be some information for later.
+                <br>
+                Under your username, you will find a link to VMWare vCenter. Open it in a new tab and log in with your "username"@ikt-fag.no and your password.
+                <br>
+                Now that you are inside, you need to find your class's name and then your Elev-Pool. If you don't know yours, you can check on the IKT-FAG website.
+                <br>
+                Right-click on your Elev-Pool and select "New Virtual Machine." This is where you give the VM a name, then click "Next." Make sure the VM is in the correct Elev-Pool, and then click "Next." Select "ikt-fag," and click "Next." Ensure it is on the correct version, and then click "Next."
+                <br>
+                Here is where you choose the operating system (OS) for your VM. We will use Ubuntu (64-bit) for this tutorial.
+                <br>
+                Since this will be a WebServer VM, we don't need a lot of processing power or RAM. You can set the RAM to 8GB if you want. Open the "Hard Disk" menu and find "Disk Provisioning," then change it to "Thin Provision." Now, open the "New CD/DVD Drive" menu and change the Client Device to "Content Library ISO File," which will open a menu where you can choose "ubuntu-22.04.1-live-server-amd64." There, now we are ready to start the server.
+                <br>
+                When the VM has started, click "LAUNCH WEB CONSOLE." Select "Try and install Ubuntu Server," and choose the language and keyboard layout you prefer.
+                <br>
+                When you get to the Internet page, go to the top and select "Edit IPv4." Change from "automatic (DHCP)" to "Manual." Here, you will need to fill out the following details to get Internet access:
+                <br>
+                Subnet: You can find the subnet information on your IKT-Fag page. It will look like x.x.x.0/24; write it in the subnet area.
+                <br>
+                Address: This is the personal IP for the VM. The first three parts of the IP should match your subnet. The last part should be 69 for others to find your site.
+                <br>
+                Gateway: You can find your Gateway on the same page as the Subnet.
+                <br>
+                NameServer: Your NameServer should start with 10.10.1.30, which is the school's DNS. If you want, you can add more DNS servers like 1.1.1.1 or 8.8.8.8.
+                <br>
+                Save your settings and continue.
+                <br>
+                You should "Update to the new Installer."
+                <br>
+                Use the entire disk, and after that, fill out your name, desired username, and password.
+                <br>
+                Don't select Ubuntu Pro, and we will install SSH later. Restart the server when the installation is complete. Press Enter to remove the installation medium and log in when it's ready.
+                <br>
+                There you have it - an up and running Ubuntu VM!
+            </p>                
+        </div>
+    </section>
+
+    <section id="ssh-git-box">
+        <div class="ssh-git">
+            <h3>How to setupp SSH and Git</h3>
+        </div>
+    </section>
+    
+
     <footer>
-        
-    </footer>
+        <div class="grid">
+            <p class="copyright">&copy; UnoHero 2023</p>
+            <ul class="social">
+                <li>
+                    <a href="https://github.com/UnoHero"><img src="./Files/GitHub.png" alt="Github"></a>
+                </li>
+            </ul>
+        </div>
+        </footer>
 </body>
 </html>
