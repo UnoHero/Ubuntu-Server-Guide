@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
     <title>Server Tutorial</title>
 </head>
 <body>
@@ -17,7 +18,10 @@
                 <a href="#ssh-git-box">Ssh and Git</a>
             </li>
             <li>
-                <a href="#">Apache2</a>
+                <a href="#apache2-box">Apache2</a>
+            </li>
+            <li>
+                <a href="#github-box">Github</a>
             </li>
         </ul>
     </nav>
@@ -34,7 +38,7 @@
     </section>
 
     <section id="vmsetup-box">
-        <div class="vmsetup">
+        <div class="line-box">
             <h3>How to setupp VM Server</h3>
         </div>
         <div>
@@ -74,7 +78,7 @@
                 <br>
                 Use the entire disk, and after that, fill out your name, desired username, and password.
                 <br>
-                Don't select Ubuntu Pro, and we will install SSH later. Restart the server when the installation is complete. Press Enter to remove the installation medium and log in when it's ready.
+                Don't select Ubuntu Pro, if you want you can install ssh and log in with you github user. Restart the server when the installation is complete. Press Enter to remove the installation medium and log in when it's ready.
                 <br>
                 There you have it - an up and running Ubuntu VM!
             </p>                
@@ -82,11 +86,78 @@
     </section>
 
     <section id="ssh-git-box">
-        <div class="ssh-git">
-            <h3>How to setupp SSH and Git</h3>
+        <div class="line-box">
+            <h3>How to setupp and install Ssh and Git</h3>
+        </div>
+        <div>
+            <video controls src="./Files/InstallSsh.webm" alt="(Video) How to install Ssh"></video>
+        </div>
+        <div>
+            <p>
+                To install Ssh you have to run the comand "sudo apt install openssh-server".
+                <br>
+                To check if ssh works run the comand "sudo systemctl status ssh"
+            </p>
+        </div>
+        <div>
+            <video controls src="./Files/TerminalSsh.webm" alt="(Video) How to Ssh to your VM thrue Terminal"></video>
+        </div>
+        <div>
+            <p>
+                Open a new terminal on your computer. Write "ssh username@x.x.x.69".
+                <br>
+                The username is the same as your VM's.
+                <br>
+                After the @ symbol you have to place the IP address of the VM.
+                <br>
+                Press enter, user the Vm's password to loginn.
+            </p>
+        </div>
+        <div>
+            <video controls src="./Files/InstallGit.webm" alt="(Video) How to install Git"></video>
+        </div>
+        <div>
+            <p>
+                Now that you are inside the Vm you have to get the code you wil be displaying on your website. 
+                <br>
+                To get this we wil be using GitHub. This means that you can write and make the code in a diferent place and download it to your server. 
+                <br>
+                First we will need to install Git on our VM, write "sudo apt install git".
+                <br>
+                Now that you have git we only need to grab the code.
+                <br>
+                If you dont have a GitHub profile i recomend you make one. Or you can download mine. 
+            </p>
         </div>
     </section>
     
+    <section id="apache2-box">
+        <div class="line-box">
+            <h3>Apache2</h3>
+        </div>
+        <div>
+            <video controls src="./Files/InstallApache2.webm" alt="(Video) How top install Apache2"></video>
+        </div>
+        <div>
+            <p>
+                Befour we can get our code we have to install Apache2 witch wil run our website. 
+                <br>
+                Run "sudo apt install apache2" to install Apache2.
+                <br>
+                Apache2 gets its code from the folder "/var/www/html". In there it looks for a folder named index.html.
+                <br>
+                After installing Apache2 if you open the browser of your choise and seartch for your servers IP-adress, you shud get the defoult Apache2 site.
+            </p>
+        </div>
+    </section>
+
+    <section id="github-box">
+        <div class="line-box">
+            <h3>Github</h3>
+        </div>
+    </section>
+
+
 
     <footer>
         <div class="grid">

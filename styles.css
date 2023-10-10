@@ -111,14 +111,15 @@ h4{
 .welcome-text a{
     margin: 20px 0;
 }
-.vmsetup{
-    background-image: url();
+.line-box{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     padding: 5px 20px 30px 5px;
+    background-color: #07083E;
+    opacity: 0.6;
 }
-.vmsetup h3{
+.line-box h3{
     margin-bottom: 0;
     text-align: center;
     font-size: 1.1em;
@@ -140,25 +141,25 @@ h4{
 .projects h4{
     color: #9994f7;
 }
-.ssh-git{
-    padding: 30px 20px;
-    background-color: #07083E;
-}
-.ssh-git h3{
+
+.line-box h3{
     text-align: center;
 }
-.ssh-git ul{
+.line-box ul{
     margin: 40px 0;
 }
-.ssh-git li{
+.line-box li{
     padding: 10px;
     background: rgba(0,0,0,0.2);
     grid-column: span 4;
     text-align: center;
 }
-.ssh-git img{
+.line-box img{
     height: 80px;
     margin: 10px auto
+}
+#ssh-git-box p{
+    padding: 10px;
 }
 #contact {
     padding: 30px 20px;
@@ -234,7 +235,7 @@ footer img{
     .projects h4{
         text-align: center;
     }
-    .ssh-git{
+    .line-box{
         padding: 30px 100px;
     }
     footer{
@@ -289,13 +290,13 @@ footer img{
         max-width: 80%;
         margin: 10px 10%;
     }
-    .ssh-git{
+    .line-box{
         padding: 30px 20px;
     }
-    .ssh-git ul{
+    .line-box ul{
         margin: 40px auto;
     }
-    .ssh-git li{
+    .line-box li{
         grid-column: span 2;
     }
     footer{
@@ -309,7 +310,7 @@ footer img{
     body{
         font-size: 20px;
     }
-    #welcome, .vmsetup, .ssh-git, #contact{
+    #welcome, .line-box, #contact{
         padding: 90px 0;
     }
     .projects a:nth-child(1){
