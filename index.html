@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <section id="vmsetup-box">
+    <section id="vmsetup-box" class="big-box">
         <div class="line-box">
             <h3>How to setupp VM Server</h3>
         </div>
@@ -45,47 +45,124 @@
             <video controls src="./Files/VmSetup.webm" alt="(Video) VM Settup tutorial "></video>
         </div>
         <div>
-            <p>
-                By following the video, you will learn how to create and set up your own VM server.
+
+                <h4>Setting up Your VM Server:</h4>
+
+                <ul>
+                    <li>Follow the video tutorial to create and set up your VM server<span id="dots">...</span></li>
+                </ul>
+                
                 <br>
-                To begin, you will have to go to the IKT-Fag website. Open your preferred search engine and look for the IP 10.12.99.69, which will take you to the IKT-Fag website. Once there, in the upper right corner, you'll find a menu. Click on your class's name, and then click on your own username. There will be some information for later.
+                <span id="more">
+                <h4>Accessing the IKT-Fag Website:</h4>
+
+                <ul>
+                    <li>
+                        Go to the IKT-Fag website by searching for the IP address 10.12.99.69 in your preferred search engine.
+                    </li>
+                    <li>
+                        Click on the menu in the upper right corner and select your class's name, then your own username for important information.
+                    </li>
+                </ul>
+
                 <br>
-                Under your username, you will find a link to VMWare vCenter. Open it in a new tab and log in with your "username"@ikt-fag.no and your password.
+                <h4>Accessing VMWare vCenter:</h4>
+
+                <ul>
+                    <li>
+                        Find the link to VMWare vCenter under your username.
+                    </li>
+                    <li>
+                        Open it in a new tab and log in using your "username"@ikt-fag.no and password.
+
+                    </li>
+                </ul>
+
                 <br>
-                Now that you are inside, you need to find your class's name and then your Elev-Pool. If you don't know yours, you can check on the IKT-FAG website.
+                <h4>Creating Your VM:</h4>
+
+                <ul>
+                    <li>
+                        Locate your class's name and Elev-Pool within VMWare vCenter. 
+                    </li>
+                    <li>
+                        Right-click on your Elev-Pool and choose "New Virtual Machine."
+                    </li>
+                    <li>
+                        Provide a name for your VM and proceed through the setup steps, ensuring it's in the right Elev-Pool and on the correct version.
+                    </li>
+                    <li>
+                        Select Ubuntu (64-bit) as the operating system.
+                    </li>
+                </ul>
+                
                 <br>
-                Right-click on your Elev-Pool and select "New Virtual Machine." This is where you give the VM a name, then click "Next." Make sure the VM is in the correct Elev-Pool, and then click "Next." Select "ikt-fag," and click "Next." Ensure it is on the correct version, and then click "Next."
+                <h4>Configuring VM Settings:</h4>
+
+                <ul>
+                    <li>
+                        Adjust the VM's resources, such as RAM (you can set it to 8GB).
+                    </li>
+                    <li>
+                        Configure the "Hard Disk" settings to use "Thin Provision."
+                    </li>
+                    <li>
+                        Set the "New CD/DVD Drive" to "Content Library ISO File" and choose "ubuntu-22.04.1-live-server-amd64."
+                    </li>
+                </ul>
+                
                 <br>
-                Here is where you choose the operating system (OS) for your VM. We will use Ubuntu (64-bit) for this tutorial.
+                <h4>Installing Ubuntu Server:</h4>
+
+                <ul>
+                    <li>
+                        Launch the web console and select "Try and install Ubuntu Server."
+                    </li>
+                    <li>
+                        Choose your preferred language and keyboard layout.
+                    </li>
+                    <li>
+                        When prompted, edit the IPv4 settings, changing from "automatic (DHCP)" to "Manual."
+                    </li>
+                    <li>
+                        Fill in the Subnet, Address, Gateway, and NameServer details as required.
+                    </li>
+                </ul>
+                
                 <br>
-                Since this will be a WebServer VM, we don't need a lot of processing power or RAM. You can set the RAM to 8GB if you want. Open the "Hard Disk" menu and find "Disk Provisioning," then change it to "Thin Provision." Now, open the "New CD/DVD Drive" menu and change the Client Device to "Content Library ISO File," which will open a menu where you can choose "ubuntu-22.04.1-live-server-amd64." There, now we are ready to start the server.
-                <br>
-                When the VM has started, click "LAUNCH WEB CONSOLE." Select "Try and install Ubuntu Server," and choose the language and keyboard layout you prefer.
-                <br>
-                When you get to the Internet page, go to the top and select "Edit IPv4." Change from "automatic (DHCP)" to "Manual." Here, you will need to fill out the following details to get Internet access:
-                <br>
-                Subnet: You can find the subnet information on your IKT-Fag page. It will look like x.x.x.0/24; write it in the subnet area.
-                <br>
-                Address: This is the personal IP for the VM. The first three parts of the IP should match your subnet. The last part should be 69 for others to find your site.
-                <br>
-                Gateway: You can find your Gateway on the same page as the Subnet.
-                <br>
-                NameServer: Your NameServer should start with 10.10.1.30, which is the school's DNS. If you want, you can add more DNS servers like 1.1.1.1 or 8.8.8.8.
-                <br>
-                Save your settings and continue.
-                <br>
-                You should "Update to the new Installer."
-                <br>
-                Use the entire disk, and after that, fill out your name, desired username, and password.
-                <br>
-                Don't select Ubuntu Pro, if you want you can install ssh and log in with you github user. Restart the server when the installation is complete. Press Enter to remove the installation medium and log in when it's ready.
-                <br>
-                There you have it - an up and running Ubuntu VM!
-            </p>                
+                <h4>Final Steps:</h4>
+
+                <ul>
+                    <li>
+                        "Update to the new Installer."
+                    </li>
+                    <li>
+                        Use the entire disk and complete the installation by entering your name, desired username, and password.
+                    </li>
+                    <li>
+                        Do not select Ubuntu Pro, you can install SSH for GitHub if you want.
+                    </li>
+                    <li>
+                        Restart the server after installation, press Enter to remove the installation medium, and log in when it's ready.
+                    </li>
+                </ul>
+                
+                <h4>Result:</h4>
+
+                <ul>
+                    <li>
+                        Congratulations! You now have an up and running Ubuntu VM.
+                    </li>
+                </ul>
+            </span>
+            <div class="button-grid">
+                <button onclick="myFunction()" id="rmvm">Read more</button>
+            </div>
+            
         </div>
     </section>
 
-    <section id="ssh-git-box">
+    <section id="ssh-git-box" class="big-box">
         <div class="line-box">
             <h3>How to setupp and install Ssh and Git</h3>
         </div>
@@ -93,45 +170,87 @@
             <video controls src="./Files/InstallSsh.webm" alt="(Video) How to install Ssh"></video>
         </div>
         <div>
-            <p>
-                To install Ssh you have to run the comand "sudo apt install openssh-server".
-                <br>
-                To check if ssh works run the comand "sudo systemctl status ssh"
-            </p>
+            <h4>Installing SSH:</h4>
+            <ul>
+                <li>
+                    Run the following command to install SSH:  "sudo apt install openssh-server"<span id="dots">...</span>
+                
+                </li>
+            </ul>
+            <span id="more">
+            
+                <h4>Checking SSH Status:</h4>
+                <ul>
+                    <li>
+                        To verify if SSH is working correctly, execute the command: "sudo systemctl status ssh."
+                    </li>
+                </ul>
+            </span>
+            <div class="button-grid">
+                <button onclick="myFunction()" id="rmsg">Read more</button>
+            </div>
         </div>
         <div>
             <video controls src="./Files/TerminalSsh.webm" alt="(Video) How to Ssh to your VM thrue Terminal"></video>
         </div>
         <div>
-            <p>
-                Open a new terminal on your computer. Write "ssh username@x.x.x.69".
-                <br>
-                The username is the same as your VM's.
-                <br>
-                After the @ symbol you have to place the IP address of the VM.
-                <br>
-                Press enter, user the Vm's password to loginn.
-            </p>
+            <h4>Logging into Your VM:</h4>
+            <ul>
+                <li>
+                    Open a new terminal on your computer<span id="dots">...</span>
+                </li>
+                <span id="more">
+                    <li>
+                        Type the following command: "ssh username@x.x.x.69" into the terminal.
+                    </li>
+                    <li>
+                        Replace "username" with your VM's username.
+                    </li>
+                    <li>
+                        After the "@" symbol, enter your VM's IP address.
+
+                    </li>
+                    <li>
+                        Press Enter, and use your VM's password to log in.            
+                    </li>
+                </ul>
+            </span>
+            <div class="button-grid">
+                <button onclick="myFunction()" id="rmvmlg">Read more</button>
+            </div>
         </div>
         <div>
             <video controls src="./Files/InstallGit.webm" alt="(Video) How to install Git"></video>
         </div>
         <div>
-            <p>
-                Now that you are inside the Vm you have to get the code you wil be displaying on your website. 
-                <br>
-                To get this we wil be using GitHub. This means that you can write and make the code in a diferent place and download it to your server. 
-                <br>
-                First we will need to install Git on our VM, write "sudo apt install git".
-                <br>
-                Now that you have git we only need to grab the code.
-                <br>
-                If you dont have a GitHub profile i recomend you make one. Or you can download mine. 
-            </p>
+            <h4>Getting Your Website Code:</h4>
+
+            <ul>
+                <li>
+                    Now that you're inside the VM, it's time to access the code you'll display on your website<span id="dots">...</span> 
+                </li>
+                <span id="more">
+                    <li>
+                        GitHub will be our tool of choice, allowing you to create and edit code in a separate location before downloading it to your server.
+                    </li>
+                    <li>
+                        Start by installing Git on your VM. Execute the command: "sudo apt install git."
+                    </li>
+                    <li>
+                        With Git installed, you're ready to fetch the code you need. 
+                    </li>
+                    <li>
+                        If you don't have a GitHub profile yet, I recommend creating one. Alternatively, you can download mine.       
+                    </li>
+                </ul>
+            </span>
+            <div class="button-grid">
+                <button onclick="myFunction()" id="rmwc">Read more</button>
+            </div>
         </div>
     </section>
     
-    <section id="apache2-box">
+    <section id="apache2-box" class="big-box">
         <div class="line-box">
             <h3>Apache2</h3>
         </div>
@@ -139,29 +258,125 @@
             <video controls src="./Files/InstallApache2.webm" alt="(Video) How top install Apache2"></video>
         </div>
         <div>
-            <p>
-                Befour we can get our code we have to install Apache2 witch wil run our website. 
-                <br>
-                Run "sudo apt install apache2" to install Apache2.
-                <br>
-                Apache2 gets its code from the folder "/var/www/html". In there it looks for a folder named index.html.
-                <br>
-                After installing Apache2 if you open the browser of your choise and seartch for your servers IP-adress, you shud get the defoult Apache2 site.
-            </p>
+            <h4>Setting Up Apache2 for Your Website:</h4>
+
+            <ul>
+                <li>
+                    Before we can access our code, we must install Apache2, the web server that will host our website<span id="dots">...</span>   
+                </li>
+                <span id="more">
+                <li>
+                    To install Apache2, run the command: "sudo apt install apache2."
+                </li>
+                <li>
+                    Apache2 fetches its content from the directory "/var/www/html." Within this folder, it specifically looks for a folder named "index.html."     
+                </li>
+                <li>
+                    Once Apache2 is installed, you can open your preferred web browser and search for your server's IP address. You should then see the default Apache2 site.           
+                </li>
+            </ul>
+            </span>
+            <div class="button-grid">
+                <button onclick="myFunction()" id="rma2">Read more</button>
+            </div>
         </div>
     </section>
 
-    <section id="github-box">
+    <section id="github-box" class="big-box">
         <div class="line-box">
             <h3>Github</h3>
         </div>
-    </section>
+        <div>
+            <video controls src="./Files/Github.webm" alt="(Video) How to make a sshkey, and how to clone a repo from GitHub."></video>
+        </div>
+        <div>
+            <h4>Hosting Your GitHub Repository on Your Website:<span id="dots">...</span></h4>
+            <span id="more">
+            <ul>
+                <li>
+                    Open the GitHub repository you intend to host on your website Find the SSH link and copy it.
+                </li>
+            </ul>
+            
+            <br>
+            <h4>Setting Up Your Server:</h4>
 
+            <ul>
+                <li>
+                    In the server's terminal, navigate to /var/www/ but refrain from entering the html folder as it will be removed later. 
+                </li>
+                <li>
+                    Attempt to clone the repository by running "sudo git clone (the copied link)."
+                </li>
+                <li>
+                    If you encounter an error, it's likely due to a missing SSH key.
+                </li>
+            </ul>
+            
+            <br>
+            <h4>Generating an SSH Key:</h4>
+
+            <ul>
+                <li>
+                    To generate an SSH key, go to the root directory and then to ".ssh." Start by running "sudo -i" to log in as the root user.
+                </li>
+                <li>
+                    In the "/root/.ssh" directory, use the command "ssh-keygen" and press Enter for each question.
+                </li>
+                <li>
+                    Confirm if it worked by running "ls." If you see a file named "id_rsa.pub," you've done it correctly.
+                </li>
+                <li>
+                    Print the key to the terminal by running "cat id_rsa.pub." Copy everything from "ssh-rsa" to "@test."
+                </li>
+            </ul>
+            
+            <br>
+            <h4>Adding the SSH Key to GitHub:</h4>
+
+            <ul>
+                <li>
+                    Open your GitHub settings, locate the SSH key section, and click "create a new key."
+                </li>
+                <li>
+                    Paste the key into the large box and assign it a name. Save it, and then reopen the terminal.
+                </li>
+            </ul>
+
+            <br>
+            <h4>Final Steps:</h4>
+
+            <ul>
+                <li>
+                    Type "exit" to exit from the root user. Ensure you're in the /var/www/ directory, not /var/www/html.
+                </li>
+                <li>
+                    Try cloning the repository again using "sudo git clone (the GitHub SSH link you copied)." If successful, it will begin downloading, and you'll see it if you run "ls."  
+                </li>
+                <li>
+                    Apache2 searches for the "html" folder, so we must remove the existing one and rename the GitHub folder. Execute "sudo rm -r html" to delete the html folder and its contents.     
+                </li>
+                <li>
+                    To ensure Apache2 finds your site, rename the downloaded folder to "html" using "sudo mv /var/www/(Name of the folder) /var/www/html."
+                </li>
+                <li>
+                    Confirm that your main HTML file is named "index.html," or Apache2 won't locate it. 
+                </li>
+                <li>
+                    Now, try visiting your website using the IP address, and your website should appear.              
+                </li>
+            </ul>
+            </span>
+            <div class="button-grid">
+                <button onclick="myFunction()" id="rmgrw">Read more</button>
+            </div>
+        </div>
+    </section>
 
 
     <footer>
         <div class="grid">
-            <p class="copyright">&copy; UnoHero 2023</p>
+            <p class="copyright"><br>&copy; UnoHero 2023</p>
             <ul class="social">
                 <li>
                     <a href="https://github.com/UnoHero"><img src="./Files/GitHub.png" alt="Github"></a>
