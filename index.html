@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="./script.js"></script>
+
     <title>Server Tutorial</title>
 </head>
 <body>
@@ -39,7 +39,7 @@
 
     <section id="vmsetup-box" class="big-box">
         <div class="line-box">
-            <h3>How to setupp VM Server</h3>
+            <h3>How to setup VM Server</h3>
         </div>
         <div>
             <video controls src="./Files/VmSetup.webm" alt="(Video) VM Settup tutorial "></video>
@@ -49,11 +49,11 @@
                 <h4>Setting up Your VM Server:</h4>
 
                 <ul>
-                    <li>Follow the video tutorial to create and set up your VM server<span id="dots">...</span></li>
+                    <li>Follow the video tutorial to create and set up your VM server<span id="rmgrw-dots">...</span></li>
                 </ul>
                 
                 <br>
-                <span id="more">
+                <span id="rmgrw-more">
                 <h4>Accessing the IKT-Fag Website:</h4>
 
                 <ul>
@@ -156,7 +156,7 @@
                 </ul>
             </span>
             <div class="button-grid">
-                <button onclick="myFunction()" id="rmvm">Read more</button>
+                <button class="button rmgrw">Read more</button>
             </div>
             
         </div>
@@ -173,11 +173,11 @@
             <h4>Installing SSH:</h4>
             <ul>
                 <li>
-                    Run the following command to install SSH:  "sudo apt install openssh-server"<span id="dots">...</span>
+                    Run the following command to install SSH:  "sudo apt install openssh-server"<span id="rmvm-dots">...</span>
                 
                 </li>
             </ul>
-            <span id="more">
+            <span id="rmvm-more">
             
                 <h4>Checking SSH Status:</h4>
                 <ul>
@@ -187,7 +187,7 @@
                 </ul>
             </span>
             <div class="button-grid">
-                <button onclick="myFunction()" id="rmsg">Read more</button>
+                <button  class="button rmvm">Read more</button>
             </div>
         </div>
         <div>
@@ -197,9 +197,9 @@
             <h4>Logging into Your VM:</h4>
             <ul>
                 <li>
-                    Open a new terminal on your computer<span id="dots">...</span>
+                    Open a new terminal on your computer<span id="rmsg-dots">...</span>
                 </li>
-                <span id="more">
+                <span id="rmsg-more">
                     <li>
                         Type the following command: "ssh username@x.x.x.69" into the terminal.
                     </li>
@@ -216,7 +216,7 @@
                 </ul>
             </span>
             <div class="button-grid">
-                <button onclick="myFunction()" id="rmvmlg">Read more</button>
+                <button  class="button rmsg">Read more</button>
             </div>
         </div>
         <div>
@@ -227,9 +227,9 @@
 
             <ul>
                 <li>
-                    Now that you're inside the VM, it's time to access the code you'll display on your website<span id="dots">...</span> 
+                    Now that you're inside the VM, it's time to access the code you'll display on your website<span id="rmvmlg-dots">...</span> 
                 </li>
-                <span id="more">
+                <span id="rmvmlg-more">
                     <li>
                         GitHub will be our tool of choice, allowing you to create and edit code in a separate location before downloading it to your server.
                     </li>
@@ -245,7 +245,7 @@
                 </ul>
             </span>
             <div class="button-grid">
-                <button onclick="myFunction()" id="rmwc">Read more</button>
+                <button class="button rmvmlg">Read more</button>
             </div>
         </div>
     </section>
@@ -262,9 +262,9 @@
 
             <ul>
                 <li>
-                    Before we can access our code, we must install Apache2, the web server that will host our website<span id="dots">...</span>   
+                    Before we can access our code, we must install Apache2, the web server that will host our website<span id="rmwc-dots">...</span>   
                 </li>
-                <span id="more">
+                <span id="rmwc-more">
                 <li>
                     To install Apache2, run the command: "sudo apt install apache2."
                 </li>
@@ -277,7 +277,7 @@
             </ul>
             </span>
             <div class="button-grid">
-                <button onclick="myFunction()" id="rma2">Read more</button>
+                <button class="button rmwc">Read more</button>
             </div>
         </div>
     </section>
@@ -290,8 +290,8 @@
             <video controls src="./Files/Github.webm" alt="(Video) How to make a sshkey, and how to clone a repo from GitHub."></video>
         </div>
         <div>
-            <h4>Hosting Your GitHub Repository on Your Website:<span id="dots">...</span></h4>
-            <span id="more">
+            <h4>Hosting Your GitHub Repository on Your Website:<span id="rma2-dots">...</span></h4>
+            <span id="rma2-more">
             <ul>
                 <li>
                     Open the GitHub repository you intend to host on your website Find the SSH link and copy it.
@@ -368,7 +368,7 @@
             </ul>
             </span>
             <div class="button-grid">
-                <button onclick="myFunction()" id="rmgrw">Read more</button>
+                <button class="button rma2">Read more</button>
             </div>
         </div>
     </section>
@@ -384,5 +384,6 @@
             </ul>
         </div>
         </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

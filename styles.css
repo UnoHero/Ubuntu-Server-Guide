@@ -32,17 +32,18 @@ video{
 }
 .button{
     background: none;  
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    border: 2px solid var(--bacground);
+    color: var(--text);
     padding: 6px 12px;
     border-radius: 20px;
     text-transform: uppercase;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
     display: inline-block;
+    margin-bottom: 10px;
 }
 .button:hover{
     color: #222;
-    background: var(--primary);
+    background: var(--nutral);
 }
 
 
@@ -172,7 +173,7 @@ h4{
 #github-box p, li, ul{
     padding: 10px;
 }
-#more {
+#rmgrw-more, #rmvm-more, #rmsg-more, #rmvmlg-more, #rmwc-more, #rma2-more {
     display: none;
 }
 .button-grid{
@@ -181,7 +182,7 @@ h4{
     gap: 10px;
     box-sizing: border-box;
 }
-#rmvm, #rmsg, #rmvmlg, #rmwc, #rma2, #rmgrw{
+.rmvm, .rmsg, .rmvmlg, .rmwc, .rma2, .rmgrw{
     grid-column: 5;
 }
 #myBtn{
@@ -267,7 +268,7 @@ footer img{
     }
     .site-nav ul{
         display: flex;
-        grid-column: 6/9;
+        grid-column: 5/10;
         justify-content: flex-end;
         align-self: center;
     }
