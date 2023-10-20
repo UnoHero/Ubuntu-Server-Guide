@@ -83,6 +83,9 @@
 
                 <ul>
                     <li>
+                        A Virtual Machine is like a computer within a computer. It's a pretend computer that runs on your real computer. This pretend computer can have its own operating system and software, just like a real one. People use VMs to do different tasks on the same computer without them getting in each other's way. It's like having multiple computers in one.
+                    </li>
+                    <li>
                         Locate your class's name and Elev-Pool within VMWare vCenter. 
                     </li>
                     <li>
@@ -94,6 +97,9 @@
                     <li>
                         Select Ubuntu (64-bit) as the operating system.
                     </li>
+                    <li>
+                        An operating system is like the boss of your computer. It tells your computer what to do and how to do it. It manages all the programs and files, and it helps you interact with your computer, like clicking on icons and opening apps. Without an operating system, your computer wouldn't know how to work.
+                    </li>
                 </ul>
                 
                 <br>
@@ -101,10 +107,10 @@
 
                 <ul>
                     <li>
-                        Adjust the VM's resources, such as RAM (you can set it to 8GB).
+                        Adjust the VM's resources, such as RAM (Random Accses Memory) you can set it to 8GB.
                     </li>
                     <li>
-                        Configure the "Hard Disk" settings to use "Thin Provision."
+                        Configure the "Hard Disk" settings to use "Thin Provision". Thin Provisioning is like a flexible storage plan for your computer. Instead of reserving a lot of space upfront, it only uses what you need. It's like saying you have a big backpack, but you only put stuff in it when you actually need it. This helps save space and makes your computer more efficient.
                     </li>
                     <li>
                         Set the "New CD/DVD Drive" to "Content Library ISO File" and choose "ubuntu-22.04.1-live-server-amd64."
@@ -125,7 +131,22 @@
                         When prompted, edit the IPv4 settings, changing from "automatic (DHCP)" to "Manual."
                     </li>
                     <li>
+                        In simple terms, DHCP is a system that assigns unique addresses to your devices on a network, making it easier for them to connect to the internet without you having to set up each device individually. It's like a party host arranging seats for guests.
+                    </li>
+                    <li>
                         Fill in the Subnet, Address, Gateway, and NameServer details as required.
+                    </li>
+                    <li>
+                        Think of a subnet as a neighborhood in a city. It's a group of connected devices or computers that can easily talk to each other because they are in the same 'neighborhood.' It helps organize and manage devices on a network.
+                    </li>
+                    <li>
+                        An address is like your home address but for a computer on a network. It's a unique set of numbers that tells other devices where to find or send data. It's like a computer's location on the internet.
+                    </li>
+                    <li>
+                        A gateway is like the main entrance to a neighborhood. It's the connection point between your local network and the outside internet. It directs data in and out, acting as the 'door' for your network to communicate with the broader internet.
+                    </li>
+                    <li>
+                        A NameServer is like a phone book for the internet. It translates easy-to-remember names (like website URLs) into IP addresses, which computers understand. It helps your computer find the right location on the internet when you type a web address.
                     </li>
                 </ul>
                 
@@ -173,12 +194,25 @@
             <h4>Installing SSH:</h4>
             <ul>
                 <li>
+                    Secure Shell or SSH is a secure way to access and control your computer from a distance, like having a magic key for remote access that keeps your computer safe.
+                </li>
+                <li>
                     Run the following command to install SSH:  "sudo apt install openssh-server"<span id="rmvm-dots">...</span>
-                
                 </li>
             </ul>
             <span id="rmvm-more">
-            
+                
+                <h4>
+                    Command Explanation
+                </h4>
+                <ul>
+                    <li>
+                        Sudo is like a special command that gives you superpowers on your computer. It stands for 'Superuser Do' and lets you do important things, like making big changes or installing software, that regular users can't.
+                    </li>
+                    <li>
+                        Apt is a tool that helps you find and install software on your computer, acting like a helpful robot that makes software management simple.
+                    </li>
+                </ul>
                 <h4>Checking SSH Status:</h4>
                 <ul>
                     <li>
@@ -232,7 +266,9 @@
                 <span id="rmvmlg-more">
                     <li>
                         GitHub will be our tool of choice, allowing you to create and edit code in a separate location before downloading it to your server.
+
                     </li>
+                    
                     <li>
                         Start by installing Git on your VM. Execute the command: "sudo apt install git."
                     </li>
@@ -241,6 +277,9 @@
                     </li>
                     <li>
                         If you don't have a GitHub profile yet, I recommend creating one. Alternatively, you can download mine.       
+                    </li>
+                    <li>
+                        If you don't want to install GIT you can use the command "SCP". (Secure Copy Protocol) To transfer files from one computer to another.
                     </li>
                 </ul>
             </span>
@@ -265,6 +304,9 @@
                     Before we can access our code, we must install Apache2, the web server that will host our website<span id="rmwc-dots">...</span>   
                 </li>
                 <span id="rmwc-more">
+                <li>
+                    Apache2 is software that manages web traffic and makes websites accessible on the internet, like a helpful guide for your computer to display web pages.
+                </li>
                 <li>
                     To install Apache2, run the command: "sudo apt install apache2."
                 </li>
@@ -296,6 +338,9 @@
                 <li>
                     Open the GitHub repository you intend to host on your website Find the SSH link and copy it.
                 </li>
+                <li>
+                    You can use the HTTPS link, it wont require a key so it can be faster/easyer but if it's a site that is going to be changed and uppdated a lot ssh is better.
+                </li>
             </ul>
             
             <br>
@@ -306,7 +351,7 @@
                     In the server's terminal, navigate to /var/www/ but refrain from entering the html folder as it will be removed later. 
                 </li>
                 <li>
-                    Attempt to clone the repository by running "sudo git clone (the copied link)."
+                    Attempt to clone the repository by running "sudo git clone (the copied link)." This wil download the files from github.
                 </li>
                 <li>
                     If you encounter an error, it's likely due to a missing SSH key.
